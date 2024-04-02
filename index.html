@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Santhosh Kumar's Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Santhosh Kumar</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#blogs" class="nav-link"><span>Blogs</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+
+<!-- ======================================
+	  				Home
+======================================= -->
+  
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/common/sk.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello World!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Santhosh Kumar</span></h1>
+						<h2>Eager to Explore </h2>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [						
+						'Generative AI  ',
+						'Large Language Model  ',
+						'Fine-Tune LLMs  ',
+						'Model Architecture ',
+						'Natural Language Processing   ',
+						'Artificial Intelligence  ',
+						'Deep Learning  ',
+						'Machine Learing  ',
+												
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>View My Repository</h2>					
+			            <p><a href="https://github.com/santhoshmlops" class="btn btn-primary py-3 px-4">Git Hub</a> 
+							<a href="https://huggingface.co/santhoshmlops" class="btn btn-white btn-outline-white py-3 px-4">Hugging Face</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+<!-- ======================================
+	  				About
+======================================= -->
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/common/sk2.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Santhosh Kumar</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Generative AI</span></p>
+										<p><span class="title-s">Languages: </span> <span>English,Tamil</span></p>
+										<p><span class="title-s">Address: </span> <span>Chennai, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s"><u>Skills</u></p>
+									<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Languages:</span> <span>Python</span></li>
+									<li class="d-flex"><span>Libraries:</span> <span>Pandas, NumPy, Seaborn, Matplotlib, Sklearn, TensorFlow, NLTK &amp; Transformers</span></li>
+									<li class="d-flex"><span>Machine Learning:</span> <span>Supervised learning, Unsupervised learning &amp; Ensemble learning</span></li>
+									<li class="d-flex"><span>Deep learning:</span> <span>NN, RNN, LSTM, GRU &amp; CNN</span></li>
+									<li class="d-flex"><span>NLP:</span> <span>Encoder-Decoder Model, NER  &amp; Language Modelling</span></li>
+									<li class="d-flex"><span>MLOps Framework:</span> <span>MLflow, DVC &amp; Docker</span></li>
+									<li class="d-flex"><span>Statistics:</span> <span>Descriptive Statistics  &amp; Inference Statistics</span></li>
+									<li class="d-flex"><span>Databases:</span> <span>MySQL &amp; MongoDB</span></li>
+									<li class="d-flex"><span>Cloud Technology:</span> <span>AWS, GCP &amp; Azure. Basic cloud-related Machine learning Services.</span></li>
+									
+								</ul>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p> I am an AI enthusiast with an entrepreneurial mindset and have gained experience in developing valuable skills in the field of artificial intelligence.</p>
+									<p><u>LLMs Related</u></p>	
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>LLMs Knowledge:</span> <span>Mistral, Falcon, Gemma, Gemini, LLaMa2, GPT-4, Claude, Qwen, Phi-2, Tiny Llama, DeciLM, StableLM, Zephyr, ChatGPT &amp; Groq</span></li>
+									<li class="d-flex"><span>LLMs Framework:</span> <span>Lang chain, llama Index &amp; Crew Ai</span></li>
+									<li class="d-flex"><span>LLMs Interactions:</span> <span>Ollama &amp; LM Studio  </span></li>								
+									<li class="d-flex"><span>Enterprise LLMs:</span> <span> Open AI, Google Gemini, Google AI Studio &amp; Amazon Bedrock,  </span></li>								
+									<li class="d-flex"><span>LLMs Fine-tuning:</span> <span>Peft, QLoRA, LoRA, SFT &amp; DPO</span></li>
+									<li class="d-flex"><span>Fine-tuning Tools:</span> <span>Unsloth &amp; Llama Factory</span></li>
+									<li class="d-flex"><span>LLMs Quantization:</span> <span>Llama.cpp</span></li>									
+									<li class="d-flex"><span>Architecture of LLMs:</span> <span>Transformers, Mamba &amp; Jamba</span></li>									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="12">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/santhoshmlops/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+<!-- ======================================
+	  				Resume
+======================================= -->
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>I am a passionate and dedicated individual with a strong interest in exploring the potential of AI technology, seeking a position where I can actively contribute to developing next-generation language models and advancing the capabilities of generative AI systems.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">01/2019-02/2023</span>
+						<h2>Entrepreneur</h2>
+						<span class="position">Santhosh Enterprises </span>
+						<p class="mt-4">Santhosh Enterprises, a firm that offers consultancy services based on projects. 
+							<ul>
+								<li>Achieved a 15% increase in profit margin on one major project and two sub-projects after proper monitoring, and minimized the loss factor by up to 12%.</li>
+								<li>Create a mutually beneficial agreement with vendors and suppliers, resulting in savings of 7 to 9%.</li>
+								<li>Increased workflow efficiency by 25% through automation of key business processes.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">02/2020-05/2020</span>
+						<h2>Business Analyst Trainee</h2>
+						<span class="position">Zoho Corporation</span>
+						<p class="mt-4">Zoho Corporation, a company that makes computer software and web-based business tools. 
+							<ul>
+								<li>Leveraged Zoho CRM analytical tool to extract insights and perform analysis.</li>
+								<li>Managed data collection processes using Zoho Survey and collected over 340 responses to evaluate.</li>
+								<li>Compiled findings into comprehensive dashboards, providing actionable insights to improve customer engagement strategies</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2018-2020</span>
+    					<h2>MBA - Business Analytics</h2>
+    					<span class="position">SRM Institute of Science and Technology</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2013-2017</span>
+    					<h2>BE - Mechanical Engineering</h2>
+    					<span class="position">St. Peter's College of Engineering</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+<!-- ======================================
+	  				Project
+======================================= -->   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>The goal is to push the boundaries of AI technologies and deliver tangible impact through pioneering projects in Gen AI, LLM, NLP, DL and ML.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/santhoshmlops/DomainSpecific-MultimodalRagApplication" class="block-20 zoom-effect" style="background-image: url('images/project/rag.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/santhoshmlops/DomainSpecific-MultimodalRagApplication">Domain-Specific Multimodal Rag Application</a></h3>
+                <p>Developed an intelligent chatbot application with a user-friendly interface for seamless interaction with a knowledge base, PDF documents, websites, and YouTube videos via input links.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/santhoshmlops/MultimediaChatGPT-Gemini" class="block-20 zoom-effect" style="background-image: url('images/project/gemini.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/santhoshmlops/MultimediaChatGPT-Gemini">Multimedia Chat GPT - Gemini</a></h3>
+                <p>Leveraging cutting-edge language models from Google, including Gemini Pro and Gemini Pro Vision, our application offers users an interactive platform to communicate effectively while seamlessly integrating various media formats..</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/santhoshmlops/CancerClassification_Mlflow-DVC_MlopsProject" class="block-20 zoom-effect" style="background-image: url('images/project/mlfow.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/santhoshmlops/CancerClassification_Mlflow-DVC_MlopsProject">Cancer Classification - Mlflow and DVC</a></h3>
+                <p>Cancer Classification with DVC & mlflow. DVC excels at data versioning, and MLflow is multiple tools combined into one, but mainly in use for its experiment tracking and artifacts logging capabilities.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/santhoshmlops/CNNClassifier" class="block-20 zoom-effect" style="background-image: url('images/project/classification.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/santhoshmlops/CNNClassifier">CNN Project - AWS CICD Deployment with Github-Actions</a></h3>
+				  <p>This Project create individual scripts for data ingestion, preparing the base model, model training, and model evaluation in the following parts. Finally, we will see how to deploy the model on AWS CI-CD using GitHub Actions.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/santhoshmlops/SpeechClassification" class="block-20 zoom-effect" style="background-image: url('images/project/nlp.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/santhoshmlops/SpeechClassification">NLP Pipeline Project - Google Cloud Syncer CI-CD </a></h3>
+				  <p>Automates the synchronization of NLP pipelines with Google Cloud services. It streamlines deployment and updates, ensuring seamless integration and efficient management of NLP resources on Google Cloud Platform</p>
+				</div>
+			  </div>
+			</div>
+			<p>Images are Generated with AI - Powered by DALL·E 3</p>
+		 </div>
+	  </div>
+    </section>
+
+<!-- ======================================
+	  				Blogs
+======================================= -->
+
+	<section class="ftco-section" id="blogs">
+		<div class="container">
+		  <div class="row justify-content-center mb-5 pb-5">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Blogs</h1>
+			  <h2 class="mb-4">Blogs</h2>
+			  <p>Data-driven Discoveries - Exploring the Frontier of AI in Our Data-Infused World .</p>
+			</div>
+		  </div>
+		  <div class="row d-flex">
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/santhoshmlops/MyHF_LLM_FineTuning/blob/main/FineTuningTemplate/Skai_Template_Simple_SFT_FineTuning.ipynb" class="block-20 zoom-effect" style="background-image: url('images/blog/sft.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/santhoshmlops/MyHF_LLM_FineTuning/blob/main/FineTuningTemplate/Skai_Template_Simple_SFT_FineTuning.ipynb">Supervised Fine-Tuning with LLM</a></h3>
+				  <p>Supervised fine-tuning (SFT) is a technique used to adapt a pre-trained Large Language Model (LLM) to a specific downstream task using labeled data.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/santhoshmlops/MyHF_LLM_FineTuning/blob/main/FineTuningTemplate/Skai_Template_DPO_FineTuning.ipynb" class="block-20 zoom-effect" style="background-image: url('images/blog/dpo.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/santhoshmlops/MyHF_LLM_FineTuning/blob/main/FineTuningTemplate/Skai_Template_DPO_FineTuning.ipynb">Direct Preference Optimization with LLM</a></h3>
+				  <p>The DPO formulation bypasses the reward modeling step and directly optimises the language model on preference data.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry">
+				<a href="https://github.com/santhoshmlops/MyHF_LLM_FineTuning/blob/main/FineTuningTemplate/Skai_Template_LLAMACPP_FineTuning.ipynb" class="block-20 zoom-effect" style="background-image: url('images/blog/llama.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/santhoshmlops/MyHF_LLM_FineTuning/blob/main/FineTuningTemplate/Skai_Template_LLAMACPP_FineTuning.ipynb">llama.cpp Fine-Tuning</a></h3>
+				  <p>llama.cpp helps to enable LLM inference with minimal setup and state-of-the-art performance on a wide variety of hardware.</p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	  <br>
+		  <!-- added justify-content-center to center align the last two projects -->
+		  <div class="row d-flex justify-content-center">  
+			  <div class="col-md-4 d-flex ftco-animate">
+				  <div class="blog-entry justify-content-end">
+				  <a href="https://github.com/santhoshmlops/MyHF_LLM_FineTuning/blob/main/FineTuningTemplate/Skai_Template_Unsloth_SFT_FineTuning.ipynb" class="block-20 zoom-effect" style="background-image: url('images/blog/Unsloth.jpg');">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+	
+					<h3 class="heading"><a href="https://github.com/santhoshmlops/MyHF_LLM_FineTuning/blob/main/FineTuningTemplate/Skai_Template_Unsloth_SFT_FineTuning.ipynb">Fine-Tuning with Unsloth</a></h3>
+					<p>Unsloth is an open-source platform for fine-tuning popular Large Language Models faster.Unsloth boasts a staggering 30x increase in training speed</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md-4 d-flex ftco-animate">
+				  <div class="blog-entry justify-content-end">
+				  <a href="https://github.com/santhoshmlops/CloudDeploymentSteps" class="block-20 zoom-effect" style="background-image: url('images/blog/cloud.jpg');">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+	
+					<h3 class="heading"><a href="https://github.com/santhoshmlops/CloudDeploymentSteps">Deploy Model to Cloud</a></h3>
+					<p>Cloud deployment is the utilization of cloud environments to run applications.Three different cloud servive are used to deploy models - AWS, GCP and Azure </p>
+				  </div>
+				</div>
+			  </div>
+			  <p>Images are Generated with AI - Powered by DALL·E 3</p>
+		   </div>
+		</div>
+	  </section>
+  
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="12">0</strong>
+                <span>LLMs Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="15">0</strong>
+                <span>Fine-Tuned Models</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="7">0</strong>
+                <span>ML Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="5">0</strong>
+                <span>DL Projects</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/common/bg_1.jpg)">
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/santhoshmlops?tab=repositories" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+		</div>
+	</section>
+
+<!-- ======================================
+	  				Contact
+======================================= -->
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Chennai, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://9566239036/">+91- 9566239036 </a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="https://mail.google.com">santhoshmlops@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="#">link</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<!-- <h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2> -->
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://github.com/santhoshmlops"><span class="icon-github"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/santhoshmlops/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://twitter.com/Santhosh_Skai"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://facebook.com/Santhosh Subramanian"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/stalwart_sandy/"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
